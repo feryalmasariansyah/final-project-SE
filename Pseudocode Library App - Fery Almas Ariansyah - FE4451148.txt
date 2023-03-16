@@ -1,0 +1,36 @@
+PSEUDOCODE PEMINJAMAN BUKU PERPUSTAKAAN (LIBRARY APP)
+
+START
+	READ AND WRITE "Buku" with INTEGER
+	READ AND WRITE "jumlahBuku" with INTEGER
+	READ AND WRITE "judulBuku" WITH STRING
+
+	READ INPUT "Masukkan jumlah buku: ": jumlahBuku
+	SET Buku = 0
+
+	WHILE Buku < jumlahBuku
+		INPUT "Masukkan judul buku: ": judulBuku
+		ADD Buku with 1
+	END WHILE
+	
+	IF cekKetersediaanBuku(judulBuku) == TRUE THEN
+		pinjamBuku(judulBuku)
+	ELSE 
+		PRINT "Buku tidak tersedia"
+	END IF
+END
+
+FUNCTION cekKetersediaanBuku(judulBuku)
+	IF judulBuku tersedia THEN
+		RETURN TRUE
+	ELSE
+		RETURB FALSE
+	END IF
+END FUNCTION
+
+FUNCTION pinjamBuku(judulBuku)
+	kurangi jumlah stok buku dengan judul judulBuku
+	PRINT "Buku dengan judul" judulBuku "berhasil dipinjam"
+END FUNCTION
+
+
